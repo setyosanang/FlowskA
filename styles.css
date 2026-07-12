@@ -1,0 +1,390 @@
+/* ===========================================================
+   WORKSPACE FLOWCHART - HIMAGRIND PNC
+   Theme Version 1.0
+=========================================================== */
+
+:root {
+
+    /* ===========================
+       COLOR PALETTE
+    =========================== */
+
+    --bg-page: #020617;
+    --bg-header: #111827;
+    --bg-card: #0f172a;
+    --bg-card-hover: #16213a;
+
+    --border: #22314b;
+
+    --primary: #4f46e5;
+    --primary-hover: #6366f1;
+
+    --text: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
+    --text-dim: #64748b;
+
+    --logo-background: #a7a89f;
+   
+    --bg-page:#10141D;
+    --bg-header:#18202D;
+    --bg-card:#202938;
+
+    --border:#364355;
+
+    --primary:#6D63F6;
+    --primary-hover:#837BFF;
+
+    --text:#F7F8FA;
+    --text-secondary:#D5D9E1;
+    --text-muted:#9CA8B8;
+
+    --logo-background:#A8A89F;
+
+    --radius: 18px;
+}
+
+/* ===========================================================
+   GLOBAL
+=========================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    height:100%;
+}
+
+body{
+    font-family:'Noto Sans',sans-serif;
+    background:var(--bg-page);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+/* ===========================================================
+   SCROLLBAR
+=========================================================== */
+
+::-webkit-scrollbar{
+    width:8px;
+    height:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:var(--bg-card);
+}
+
+::-webkit-scrollbar-thumb{
+    background:var(--border);
+    border-radius:999px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#334155;
+}
+
+/* ===========================================================
+   HEADER
+=========================================================== */
+
+header{
+    background:var(--bg-header);
+}
+
+/* ===========================================================
+   CARD
+=========================================================== */
+
+.bg-slate-900{
+    background:var(--bg-card)!important;
+}
+
+.bg-slate-950{
+    background:var(--bg-page)!important;
+}
+
+.border-slate-800{
+    border-color:var(--border)!important;
+}
+
+.text-slate-100{
+    color:var(--text)!important;
+}
+
+.text-slate-200{
+    color:var(--text)!important;
+}
+
+.text-slate-300{
+    color:var(--text-secondary)!important;
+}
+
+.text-slate-400{
+    color:var(--text-muted)!important;
+}
+
+.text-slate-500{
+    color:var(--text-dim)!important;
+}
+
+.text-indigo-400{
+    color:#8b8eff!important;
+}
+
+.bg-indigo-600{
+    background:var(--primary)!important;
+}
+
+.bg-indigo-600:hover{
+    background:var(--primary-hover)!important;
+}
+
+/* ===========================================================
+   LOGO
+=========================================================== */
+
+.logo-wrapper{
+
+    width:96px;
+    height:96px;
+
+    background:var(--logo-background);
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    flex-shrink:0;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:8px;
+
+    box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,.08),
+        0 10px 25px rgba(0,0,0,.25);
+}
+
+.logo-wrapper img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+
+    display:block;
+}
+
+/* ===========================================================
+   PREVIEW
+=========================================================== */
+
+.preview-shell{
+
+    position:relative;
+
+    width:100%;
+
+    height:100%;
+
+    min-height:60vh;
+
+    overflow:hidden;
+
+    border-radius:var(--radius);
+
+    background:var(--bg-page);
+}
+
+@media(min-width:1024px){
+
+    .preview-shell{
+
+        min-height:620px;
+
+    }
+
+}
+
+.preview-stage{
+
+    position:relative;
+
+    width:100%;
+
+    height:100%;
+
+    min-height:60vh;
+}
+
+@media(min-width:1024px){
+
+    .preview-stage{
+
+        min-height:620px;
+
+    }
+
+}
+
+.preview-image{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    display:block;
+
+    object-fit:contain;
+
+    object-position:center;
+
+    border-radius:12px;
+
+    background:var(--bg-page);
+}
+
+.preview-fallback{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:2rem;
+}
+
+/* ===========================================================
+   BUTTON
+=========================================================== */
+
+.view-btn{
+
+    transition:.25s;
+
+    border-radius:14px;
+}
+
+.view-btn:hover{
+
+    background:rgba(255,255,255,.06)!important;
+}
+
+.view-btn.active{
+
+    background:var(--primary)!important;
+
+    color:white!important;
+}
+
+/* ===========================================================
+   PANEL
+=========================================================== */
+
+aside>div,
+section>div{
+
+    border-radius:18px;
+
+    transition:.25s;
+}
+
+aside>div:hover,
+section>div:hover{
+
+    border-color:#324664!important;
+}
+
+/* ===========================================================
+   MOBILE
+=========================================================== */
+
+@media(max-width:768px){
+
+    .logo-wrapper{
+
+        width:92px;
+        height:92px;
+    }
+
+    .preview-shell{
+
+        min-height:55vh;
+    }
+
+    .preview-stage{
+
+        min-height:55vh;
+    }
+
+}
+
+/* ===========================================================
+   DESKTOP
+=========================================================== */
+
+@media(min-width:1280px){
+
+    .preview-shell{
+
+        min-height:700px;
+    }
+
+    .preview-stage{
+
+        min-height:700px;
+    }
+
+}
+.preview-container{
+    width:100%;
+    overflow:auto;
+    background:none;
+    border:none;
+    padding:0;
+}
+
+.preview-wrapper{
+    width:max-content;
+    margin:auto;
+}
+
+.preview-image{
+    display:block;
+    width:auto;
+    height:auto;
+    max-width:none;
+    max-height:none;
+    position:static;
+    object-fit:unset;
+}
+.preview-image{
+    display:block;
+
+    width:100%;
+    max-width:900px;
+
+    height:auto;
+
+    margin:auto;
+}
